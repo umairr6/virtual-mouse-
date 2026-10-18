@@ -74,3 +74,74 @@ Allow webcam access if prompted.
 
 🖐️ Gesture Controls
 
+Gesture| Action
+Move your hand/index finger| Move the mouse cursor
+Touch thumb and index finger| Left-click
+Touch index and middle fingers| Right-click
+Raise index and middle fingers| Scroll
+
+Gesture behavior depends on the gesture detection logic implemented in your source code.
+
+🧠 How It Works
+
+1. The webcam captures live video.
+2. OpenCV processes the video frames.
+3. MediaPipe detects hand landmarks and finger positions.
+4. The program interprets those landmarks as gestures.
+5. PyAutoGUI performs the corresponding mouse actions.
+
+🔧 Troubleshooting
+
+Webcam not opening
+
+- Close other applications that may be using the webcam.
+- Check camera permissions and your camera index in "main.py".
+
+Module not found
+
+- Activate your virtual environment.
+- Install the missing dependency using "pip".
+
+Mouse clicks happen repeatedly
+
+- Adjust the gesture detection threshold or action delay.
+- Add a gesture-release requirement before allowing another click.
+
+Cursor movement is inaccurate
+
+- Adjust coordinate mapping and smoothing settings in "main.py".
+
+Application does not start
+
+- Check the Python version and dependency compatibility.
+- Read the error message in the VS Code terminal.
+
+🔒 Safety Note
+
+This application can control your real mouse. Test it carefully, keep your hands away from unintended click gestures, and provide a reliable way to stop the program.
+
+🔮 Future Improvements
+
+- Add drag-and-drop functionality.
+- Add volume and brightness controls.
+- Add customizable gestures.
+- Improve cursor smoothing and tracking accuracy.
+- Add a graphical user interface.
+- Support more hand gestures and accessibility features.
+
+🤝 Contributing
+
+Contributions, suggestions, and bug reports are welcome!
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
+
+📄 License
+
+This project can be distributed under the MIT License. Add a "LICENSE" file to the repository if you choose to use that license.
+
+---
+
+Built with Python and computer vision.
